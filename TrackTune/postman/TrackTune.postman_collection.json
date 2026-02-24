@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "b5e7e5d0-5f5a-4a3c-8d5e-5f5a4a3c8d5e",
+		"name": "TrackTune API",
+		"description": "Collection for testing the TrackTune API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Welcome Endpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Welcome endpoint that provides basic information about the API"
+			},
+			"response": []
+		},
+		{
+			"name": "Recommend Song - Happy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mood\": \"happy\",\n    \"city\": \"New York\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/recommend",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"recommend"
+					]
+				},
+				"description": "Get song recommendations for a happy mood in New York"
+			},
+			"response": []
+		},
+		{
+			"name": "Recommend Song - Sad",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mood\": \"sad\",\n    \"city\": \"Seattle\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/recommend",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"recommend"
+					]
+				},
+				"description": "Get song recommendations for a sad mood in Seattle"
+			},
+			"response": []
+		},
+		{
+			"name": "Recommend Song - Relaxed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mood\": \"relaxed\",\n    \"city\": \"Los Angeles\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/recommend",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"recommend"
+					]
+				},
+				"description": "Get song recommendations for a relaxed mood in Los Angeles"
+			},
+			"response": []
+		},
+		{
+			"name": "Recommend Song - Energetic",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mood\": \"energetic\",\n    \"city\": \"Miami\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/recommend",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"recommend"
+					]
+				},
+				"description": "Get song recommendations for an energetic mood in Miami"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/weather/London",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"weather",
+						"London"
+					]
+				},
+				"description": "Get weather information and suggested mood for London"
+			},
+			"response": []
+		}
+	],
+	"event": [],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
